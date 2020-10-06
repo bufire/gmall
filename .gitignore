@@ -1,5 +1,6 @@
 .idea/
 .mvn/
+.mvnx*
 target/
 *target
 # Compiled class file
@@ -25,3 +26,23 @@ target/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+gmall-common/src/main/resources/
+gmall-common/src/test/
+gmall-gateway/.gitignore
+gmall-gateway/mvnw
+gmall-gateway/mvnw.cmd
+gmall-gateway/pom.xml
+gmall-gateway/src/main/java/
+gmall-gateway/src/main/resources/application.properties
+gmall-gateway/src/test/
+gmall-generator/src/test/java/io/
+gmall-oms/src/main/resources/static/
+gmall-oms/src/main/resources/templates/
+gmall-pms/src/main/resources/static/
+gmall-pms/src/main/resources/templates/
+gmall-sms/src/main/resources/static/
+gmall-sms/src/main/resources/templates/
+gmall-ums/src/main/resources/static/
+gmall-ums/src/main/resources/templates/
+gmall-wms/src/main/resources/static/
+gmall-wms/src/main/resources/templates/

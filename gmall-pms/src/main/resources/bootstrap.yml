@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pms-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: d1205edd-8d7a-4a84-b219-7994b35d6638
+        group: DEFAULT_GROUP
+        file-extension: yml
+    alibaba:
+      seata:
+        tx-service-group: gmall_tx_group

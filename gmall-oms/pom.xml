@@ -87,7 +87,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.0.RELEASE</version>
                 <configuration>
-                    <mainClass>com.atguigu.gmalloms.GmallOmsApplication</mainClass>
+                    <mainClass>com.atguigu.gmall.GmallOmsApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
