@@ -88,10 +88,10 @@ public class GoodsListener {
                     }
 
                     //查询分类
-                    ResponseVo<CategoryEntity> cateGoryEntityResp = pmsClient.queryCategoryById(skuEntity.getCatagoryId());
+                    ResponseVo<CategoryEntity> cateGoryEntityResp = pmsClient.queryCategoryById(skuEntity.getCategoryId());
                     CategoryEntity categoryEntity = cateGoryEntityResp.getData();
                     if (categoryEntity != null) {
-                        goods.setCategoryId(skuEntity.getCatagoryId());
+                        goods.setCategoryId(skuEntity.getCategoryId());
                         goods.setCategoryName(categoryEntity.getName());
                     }
 

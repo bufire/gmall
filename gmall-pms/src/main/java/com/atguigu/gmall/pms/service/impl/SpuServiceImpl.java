@@ -1,16 +1,16 @@
 package com.atguigu.gmall.pms.service.impl;
 
 import com.atguigu.gmall.pms.entity.*;
-import com.atguigu.gmall.pms.entity.vo.SkuVo;
-import com.atguigu.gmall.pms.entity.vo.SpuAttrValueVo;
-import com.atguigu.gmall.pms.entity.vo.SpuVo;
+import com.atguigu.gmall.pms.vo.SkuVo;
+import com.atguigu.gmall.pms.vo.SpuAttrValueVo;
+import com.atguigu.gmall.pms.vo.SpuVo;
 import com.atguigu.gmall.pms.feign.GmallSmsClient;
 import com.atguigu.gmall.pms.mapper.SkuMapper;
 import com.atguigu.gmall.pms.mapper.SpuDescMapper;
 import com.atguigu.gmall.pms.service.SkuAttrValueService;
 import com.atguigu.gmall.pms.service.SkuImagesService;
 import com.atguigu.gmall.pms.service.SpuAttrValueService;
-import com.atguigu.gmall.smsinterface.entity.vo.SkuSaleVo;
+import com.atguigu.gmall.sms.vo.SkuSaleVo;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -112,7 +112,7 @@ public class SpuServiceImpl extends ServiceImpl<SpuMapper, SpuEntity> implements
             BeanUtils.copyProperties(skuVo, skuEntity);
             // 品牌和分类的id需要从spuInfo中获取
             skuEntity.setBrandId(spuVo.getBrandId());
-            skuEntity.setCatagoryId(spuVo.getCategoryId());
+            skuEntity.setCategoryId(spuVo.getCategoryId());
             // 获取图片列表
             List<String> images = skuVo.getImages();
             // 如果图片列表不为null，则设置默认图片

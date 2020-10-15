@@ -16,6 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -37,6 +38,7 @@ class GmallSearchApplicationTests {
         this.restTemplate.putMapping(Goods.class);
         Integer pageNum = 1;
         Integer pageSize = 100;
+        List list = new ArrayList();
         do {
             PageParamVo pageParamVo = new PageParamVo();
             pageParamVo.setPageNum(pageNum);
@@ -89,10 +91,10 @@ class GmallSearchApplicationTests {
                         }
 
                         //查询分类
-                        ResponseVo<CategoryEntity> cateGoryEntityResp = pmsClient.queryCategoryById(skuEntity.getCatagoryId());
+                        ResponseVo<CategoryEntity> cateGoryEntityResp = pmsClient.queryCategoryById(skuEntity.getCategoryId());
                         CategoryEntity categoryEntity = cateGoryEntityResp.getData();
                         if (categoryEntity != null) {
-                            goods.setCategoryId(skuEntity.getCatagoryId());
+                            goods.setCategoryId(skuEntity.getCategoryId());
                             goods.setCategoryName(categoryEntity.getName());
                         }
 

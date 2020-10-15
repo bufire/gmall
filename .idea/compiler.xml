@@ -8,30 +8,45 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="thymeleaf-demo" />
+        <module name="gmall-item" />
         <module name="gmall-oms" />
-        <module name="gmall-pms" />
+        <module name="gmall-auth-interface" />
+        <module name="gmall-generator" />
         <module name="gmall-sms" />
+        <module name="gmall-index" />
         <module name="gmall-ums" />
+        <module name="gmall-wms-interface" />
         <module name="gmall-wms" />
         <module name="gmall-sms-interface" />
         <module name="provider" />
         <module name="gmall-common" />
-        <module name="gmall-wms-interface" />
+        <module name="client" />
+        <module name="clock-test" />
+        <module name="gmall-pms" />
         <module name="gmall-gateway" />
         <module name="gmall-admin" />
         <module name="consumer" />
-        <module name="gmall-generator" />
+        <module name="sso-service" />
+        <module name="gmall-ums-interface" />
+        <module name="gmall-cart" />
         <module name="gmall-pms-interface" />
+        <module name="gmall-auth" />
         <module name="gmall-search" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="client" options="-parameters" />
       <module name="gmall-admin" options="-parameters" />
+      <module name="gmall-auth" options="-parameters" />
+      <module name="gmall-auth-interface" options="-parameters" />
+      <module name="gmall-cart" options="-parameters" />
       <module name="gmall-common" options="-parameters" />
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
+      <module name="gmall-index" options="-parameters" />
+      <module name="gmall-item" options="-parameters" />
       <module name="gmall-oms" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-pms-interface" options="-parameters" />
@@ -39,8 +54,10 @@
       <module name="gmall-sms" options="-parameters" />
       <module name="gmall-sms-interface" options="-parameters" />
       <module name="gmall-ums" options="-parameters" />
+      <module name="gmall-ums-interface" options="-parameters" />
       <module name="gmall-wms" options="-parameters" />
       <module name="gmall-wms-interface" options="-parameters" />
+      <module name="sso-service" options="-parameters" />
     </option>
   </component>
 </project>

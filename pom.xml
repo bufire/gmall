@@ -23,6 +23,8 @@
         <module>gmall-sms-interface</module>
         <module>gmall-pms-interface</module>
         <module>gmall-wms-interface</module>
+        <module>gmall-auth-interface</module>
+        <module>gmall-ums-interface</module>
     </modules>
 
     <properties>
