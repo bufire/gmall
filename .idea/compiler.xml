@@ -7,31 +7,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="thymeleaf-demo" />
-        <module name="gmall-item" />
-        <module name="gmall-oms" />
-        <module name="gmall-auth-interface" />
-        <module name="gmall-generator" />
-        <module name="gmall-sms" />
-        <module name="gmall-index" />
-        <module name="gmall-ums" />
-        <module name="gmall-wms-interface" />
-        <module name="gmall-wms" />
         <module name="gmall-sms-interface" />
-        <module name="provider" />
-        <module name="gmall-common" />
         <module name="client" />
-        <module name="clock-test" />
+        <module name="gmall-ums" />
+        <module name="gmall-order" />
         <module name="gmall-pms" />
+        <module name="gmall-wms-interface" />
         <module name="gmall-gateway" />
-        <module name="gmall-admin" />
-        <module name="consumer" />
-        <module name="sso-service" />
         <module name="gmall-ums-interface" />
-        <module name="gmall-cart" />
+        <module name="clock-test" />
+        <module name="gmall-index" />
+        <module name="gmall-oms" />
+        <module name="gmall-generator" />
+        <module name="consumer" />
+        <module name="gmall-admin" />
+        <module name="thymeleaf-demo" />
+        <module name="gmall-cart-interface" />
+        <module name="provider" />
+        <module name="gmall-oms-interface" />
+        <module name="gmall-payment" />
+        <module name="gmall-sms" />
         <module name="gmall-pms-interface" />
-        <module name="gmall-auth" />
         <module name="gmall-search" />
+        <module name="gmall-scheduled" />
+        <module name="gmall-item" />
+        <module name="sso-service" />
+        <module name="gmall-common" />
+        <module name="gmall-auth" />
+        <module name="gmall-auth-interface" />
+        <module name="gmall-wms" />
+        <module name="gmall-cart" />
       </profile>
     </annotationProcessing>
   </component>
@@ -42,14 +47,19 @@
       <module name="gmall-auth" options="-parameters" />
       <module name="gmall-auth-interface" options="-parameters" />
       <module name="gmall-cart" options="-parameters" />
+      <module name="gmall-cart-interface" options="-parameters" />
       <module name="gmall-common" options="-parameters" />
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
       <module name="gmall-index" options="-parameters" />
       <module name="gmall-item" options="-parameters" />
       <module name="gmall-oms" options="-parameters" />
+      <module name="gmall-oms-interface" options="-parameters" />
+      <module name="gmall-order" options="-parameters" />
+      <module name="gmall-payment" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-pms-interface" options="-parameters" />
+      <module name="gmall-scheduled" options="-parameters" />
       <module name="gmall-search" options="-parameters" />
       <module name="gmall-sms" options="-parameters" />
       <module name="gmall-sms-interface" options="-parameters" />

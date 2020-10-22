@@ -52,7 +52,7 @@ public class AuthGatewayFilterFactory extends AbstractGatewayFilterFactory<AuthG
                 String path = request.getURI().getPath();
                 // 1.判断当前请求路径在不在名单中，不在直接放行
                 if(config.authPaths.stream().allMatch(authPath -> path.indexOf(authPath) == -1)){
-                    chain.filter(exchange);
+                    return chain.filter(exchange);
                 }
                 // 2.获取token信息：同步请求cookie中获取，异步请求头信息中获取
                 String token = request.getHeaders().getFirst("token");

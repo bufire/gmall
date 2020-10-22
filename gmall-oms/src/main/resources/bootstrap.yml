@@ -1,5 +1,5 @@
 server:
-  port:
+  port: 18095
 spring:
   application:
     name: oms-service
@@ -19,7 +19,7 @@ spring:
 
   # redis
   redis:
-    host: 192.168.211.135
+    host: 192.168.211.137
 
   # dataSource
   datasource:
@@ -35,16 +35,29 @@ spring:
   sleuth:
     sampler:
       probability: 1
-
+  rabbitmq:
+    host: 192.168.211.137
+    virtual-host: Aaron
+    username: admin
+    password: 123456
+    listener:
+      direct:
+        acknowledge-mode: manual
+      type: simple
+      simple:
+        concurrency: 3
+        acknowledge-mode: manual
+        prefetch: 1
 # mybatis-plus
 mybatis-plus:
   mapper-locations: classpath:mapper/oms/*.xml
   global-config:
     db-config:
       id-type: auto
-  type-aliases-package: com.atguigu.gmall.pms.entity
+  type-aliases-package: com.atguigu.gmall.oms.entity
 # feign
 feign:
   sentinel:
     enabled: true
 # zipkin
+

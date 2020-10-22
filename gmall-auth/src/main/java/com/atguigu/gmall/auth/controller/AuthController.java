@@ -21,6 +21,7 @@ public class AuthController {
 
         // 把登录前的页面地址，记录到登录页面，以备将来登录成功，回到登录前的页面
         model.addAttribute("returnUrl", returnUrl);
+        System.out.println(returnUrl);
         return "login";
     }
 
@@ -32,7 +33,6 @@ public class AuthController {
             HttpServletRequest request, HttpServletResponse response
     ) throws Exception {
         this.authService.accredit(loginName, password, request, response);
-
         // 登录成功重定向到登录前页面
         return "redirect:" + returnUrl;
     }

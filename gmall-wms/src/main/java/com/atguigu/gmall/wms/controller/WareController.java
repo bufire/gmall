@@ -2,6 +2,7 @@ package com.atguigu.gmall.wms.controller;
 
 import java.util.List;
 
+import com.atguigu.gmall.wms.entity.SkuLockVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,10 +41,8 @@ public class WareController {
     @ApiOperation("分页查询")
     public ResponseVo<PageResultVo> queryWareByPage(PageParamVo paramVo){
         PageResultVo pageResultVo = wareService.queryPage(paramVo);
-
         return ResponseVo.ok(pageResultVo);
     }
-
 
     /**
      * 信息

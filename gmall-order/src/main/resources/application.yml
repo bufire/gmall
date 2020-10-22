@@ -1,0 +1,52 @@
+server:
+  port: 18094
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+  zipkin:
+    base-url: http://localhost:9411
+    discovery-client-enabled: false
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
+  redis:
+    host: 192.168.211.137
+  rabbitmq:
+    host: 192.168.211.137
+    virtual-host: Aaron
+    username: admin
+    password: 123456
+    publisher-confirm-type: simple
+    publisher-returns: true
+  thymeleaf:
+    cache: false
+feign:
+  sentinel:
+    enabled: true
+thread:
+  pool:
+    coreSize: 100
+    maxSize: 500
+    keepalive: 60
+    blockQueueSize: 1000
+auth:
+  jwt:
+    pubKeyPath: D:\\demo\\gmall\\rsa\\rsa.pub
+    cookieName: GMALL-TOKEN
+    userKey: userKey
+    expireTime: 15552000 # userKey的过期时间
+logging:
+  level:
+    com:
+      alibaba:
+        nacos:
+          client:
+            naming=error:

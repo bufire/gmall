@@ -33,7 +33,7 @@ public class AuthServiceImpl implements AuthService {
             // 1. 完成远程请求，获取用户信息
             ResponseVo<UserEntity> userEntityResponseVo = this.umsClient.queryUser(loginName, password);
             UserEntity userEntity = userEntityResponseVo.getData();
-
+            System.out.println(userEntity);
             // 2. 判断用户信息是否为空
             if (userEntity == null) {
                 throw new Exception("用户名或者密码有误！");
